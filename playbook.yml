@@ -1,0 +1,7 @@
+- hosts: terraform-ansible
+  tasks:
+
+  - name: Create File README.md
+    copy:
+      dest: /home/ubuntu/README.md
+      content: "Ubuntu 20.04 LTS - System Ready!"
