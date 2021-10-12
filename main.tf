@@ -22,9 +22,9 @@ resource "aws_instance" "prod" {
     Name = "prod-instance"
   }
   vpc_security_group_ids = [
-    "${aws_security_group.us-east-2-allow_ssh.id}"
+    "${aws_security_group.us-east-2-rules-prod-instance.id}"
   ]
-  depends_on = [aws_security_group.us-east-2-allow_ssh]
+  depends_on = [aws_security_group.us-east-2-rules-prod-instance]
 
   # user_data = <<-EOF
   #               #!/bin/bash
